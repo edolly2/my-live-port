@@ -29,6 +29,7 @@ body {
 body {
   line-height: 1.5;
   overflow-x: hidden;
+  position: relative;
 }
 
 ol,
