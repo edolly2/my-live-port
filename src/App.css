@@ -1,29 +1,18 @@
 h1 {
   font-family: "Monday Routines";
   white-space: nowrap;
-  font-size: 4.8rem;
+  /* font-size: 4.8rem; */
+  font-size: calc(48px + (48 - 12) * (100vw - 400px) / (1920 - 400));
 }
 
 h2 {
-  font-size: 3.6rem;
+  /* font-size: 3.6rem; */
+  font-size: calc(36px + (36 - 12) * (100vw - 400px) / (1920 - 400));
 }
 
 h3 {
-  font-size: 2.4rem;
-}
-
-@media screen and (min-width: 767px) and (max-width: 1025px) {
-  h1 {
-    font-size: 5.4rem;
-  }
-
-  h2 {
-    font-size: 4.2rem;
-  }
-
-  h3 {
-    font-size: 3rem;
-  }
+  /* font-size: 2.4rem; */
+  font-size: calc(24px + (24 - 12) * (100vw - 400px) / (1920 - 400));
 }
 
 p,
@@ -31,30 +20,14 @@ article,
 ul,
 li,
 button {
-  font-size: 2rem;
-}
-
-@media screen and (min-width: 767px) and (max-width: 1025px) {
-  p,
-  article,
-  ul,
-  li,
-  button {
-    font-size: 2.4rem;
-  }
+  font-size: calc(20px + (20 - 12) * (100vw - 400px) / (1920 - 400));
 }
 
 .icons {
-  font-size: 4rem;
+  font-size: calc(40px + (40 - 12) * (100vw - 400px) / (1920 - 400));
   cursor: pointer;
   position: relative;
   z-index: 1;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1025px) {
-  .icons {
-    font-size: 6rem;
-  }
 }
 
 .skill-icon {
@@ -62,7 +35,7 @@ button {
   /* left: 10rem; */
 
   /* transform: translate(-500%); */
-  font-size: 3rem;
+  font-size: calc(30px + (30 - 12) * (100vw - 400px) / (1920 - 400));
   margin-left: 0.4rem;
   /* z-index: 1; */
 }
@@ -119,5 +92,5 @@ textarea {
 input::placeholder,
 textarea::placeholder {
   color: rgba(0, 0, 0, 0.3);
-  font-size: 1.6rem;
+  font-size: calc(16px + (16 - 12) * (100vw - 400px) / (1920 - 400));
 }
