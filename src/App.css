@@ -1,11 +1,47 @@
 h1 {
   font-family: "Monday Routines";
   white-space: nowrap;
+  font-size: 4.8rem;
 }
 
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1025px) {
+  h1 {
+    font-size: 5.4rem;
+  }
+
+  h2 {
+    font-size: 4.2rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+}
+
+p,
+article,
 ul,
-li {
+li,
+button {
   font-size: 2rem;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1025px) {
+  p,
+  article,
+  ul,
+  li,
+  button {
+    font-size: 2.4rem;
+  }
 }
 
 .icons {
@@ -15,22 +51,73 @@ li {
   z-index: 1;
 }
 
-/* .hidden {
-  display: none;
-} */
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+  .icons {
+    font-size: 6rem;
+  }
+}
+
+.skill-icon {
+  /* position: absolute; */
+  /* left: 10rem; */
+
+  /* transform: translate(-500%); */
+  font-size: 3rem;
+  margin-left: 0.4rem;
+  /* z-index: 1; */
+}
 
 .slide {
   overflow-y: hidden;
   max-height: 100%;
   transition-property: all;
   transition-duration: 0.5s;
-  /* transition-timing-function: cubic-bezier(0, 1, 0.5, 1); */
 }
 
 .closed {
   max-height: 0;
   transition-property: all;
   transition-duration: 0.5s;
-  /* transition-timing-function: cubic-bezier(0, 1, 0.5, 1); */
   overflow-y: hidden;
+}
+
+.link {
+  color: white;
+}
+
+.active-nav-link,
+.link:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 0 1rem white;
+  width: 75%;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.4rem 0;
+  border-radius: 0.6rem;
+  background-color: white;
+  border: 2px solid black;
+  min-width: 10rem;
+  max-width: 10rem;
+  /* text-align: center; */
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+textarea {
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 1.6rem;
 }
