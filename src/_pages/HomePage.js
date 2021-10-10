@@ -1,7 +1,9 @@
 import PageTitle from "../_components/PageTitle";
 import styled from "styled-components";
 
-const HomePageContainer = styled.main``;
+const HomePageContainer = styled.main`
+  min-height: 76vh;
+`;
 const HomePageTitle = styled.h2``;
 
 const HomePageSubTitle = styled.h3``;

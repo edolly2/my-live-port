@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const ContactPageContainer = styled.main`
   // padding-bottom: 5rem;
+  min-height: 76vh;
 `;
 
 const ContactSubTitle = styled.h3`

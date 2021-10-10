@@ -6,7 +6,9 @@ import PageTitle from "../_components/PageTitle";
 import { SiJavascript } from "react-icons/si";
 import styled from "styled-components";
 
-const BioPageContainer = styled.main``;
+const BioPageContainer = styled.main`
+  min-height: 76vh;
+`;
 
 const BioSubTitleTop = styled.h3`
   text-align: center;

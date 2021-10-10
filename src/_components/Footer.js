@@ -12,6 +12,8 @@ const FooterContainer = styled.footer`
   margin-top: 5rem;
   background: black;
   border-top: 2px solid gold;
+  position: relative;
+  bottom: 0;
 `;
 
 const Footer = () => {
