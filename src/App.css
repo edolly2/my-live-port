@@ -18,9 +18,16 @@ h3 {
 p,
 article,
 ul,
-li,
-button {
+li {
   font-size: calc(20px + (20 - 12) * (100vw - 400px) / (1920 - 400));
+}
+
+li {
+  white-space: nowrap;
+}
+
+button {
+  font-size: 1.8rem;
 }
 
 .icons {
@@ -93,4 +100,74 @@ input::placeholder,
 textarea::placeholder {
   color: rgba(0, 0, 0, 0.3);
   font-size: calc(16px + (16 - 12) * (100vw - 400px) / (1920 - 400));
+}
+
+.show-blog-notification {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.tool-tip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tool-tip-container .tool-tip-text {
+  visibility: hidden;
+  min-width: 20rem;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tool-tip-container .tool-tip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tool-tip-container:hover .tool-tip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+#static:checked {
+  background-color: blue;
+  display: none;
+}
+
+#vanilla:checked {
+  background-color: red;
+  display: none;
+}
+
+#jsjq:checked {
+  background-color: green;
+  display: none;
+}
+
+#react:checked {
+  background-color: yellow;
+  display: none;
+}
+
+.brown {
+  background-color: gray;
 }

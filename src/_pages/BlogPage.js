@@ -1,5 +1,7 @@
+import BlogNotification from "../_components/BlogNotification";
 import PageTitle from "../_components/PageTitle";
 import styled from "styled-components";
+import { useState } from "react";
 
 const BlogPageContainer = styled.main`
   width: 75%;
@@ -16,6 +18,8 @@ const BlogPageInfo = styled.p`
 const BlogPageButton = styled.button``;
 
 const BlogPage = () => {
+  const [blogNotification, setBlogNotification] = useState(false);
+  console.log(blogNotification);
   return (
     <BlogPageContainer>
       <PageTitle titleText="BLOG" />
@@ -26,7 +30,25 @@ const BlogPage = () => {
         my portfolio more and offer any insights, questions, comments, or
         concerns you may have. I appreciate your time!
       </BlogPageInfo>
-      <BlogPageButton className="btn">VISIT</BlogPageButton>
+      <BlogPageButton
+        className="btn"
+        onClick={() => {
+          setBlogNotification(true);
+        }}
+      >
+        VISIT
+      </BlogPageButton>
+      <BlogNotification
+        blogNotificationClass={
+          blogNotification ? "show-blog-notification" : "hidden"
+        }
+        blogAcceptBtnClick={() => {
+          window.location.href = "https://www.google.com";
+        }}
+        blogCancelBtnClick={() => {
+          setBlogNotification(false);
+        }}
+      />
     </BlogPageContainer>
   );
 };

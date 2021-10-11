@@ -137,7 +137,7 @@ const BioPage = () => {
         <br />
         <ArticleInfo>
           Front-end Development is my passion and number one hobby. When I am
-          not creation mode, I love spending my time with my family.
+          not creation in mode, I love spending my time with my family.
         </ArticleInfo>
         <Underline />
       </BioSectionContainer>

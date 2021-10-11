@@ -20,8 +20,11 @@ const ContactSubTitle2 = styled.h3`
 `;
 
 const ContactSectionContainer = styled.section`
-  text-align: center;
+  // text-align: center;
+  display: flex;
+  flex-direction: column;
   padding: 1.6rem 0;
+  // gap: 1.6rem;
   // width: 100%;
 `;
 
@@ -31,11 +34,12 @@ const ContactSectionContainer2 = styled.section`
   // width: 100%;
 `;
 
-const ContactEmail = styled.p`
-  width: 100%;
+const ContactEmail = styled.input`
+  // width: 100%;
   // display: flex;
   // justify-content: center;
-  margin-bottom: 1.6rem;
+  margin: 0 auto 1.6rem auto;
+  font-size: calc(20px + (20 - 12) * (100vw - 400px) / (1920 - 400));
 `;
 
 const Underline = styled.hr`
@@ -75,14 +79,60 @@ const OrTitleText = styled.h3`
   border-radius: 0.6rem;
 `;
 
+const ToolTipContainer = styled.div`
+  margin: 0 auto;
+`;
+const ToolTipContent = styled.span``;
+
+const copyText = () => {
+  /* Get the text field */
+  let getCopyText = document.getElementById("myEmail");
+
+  /* Select the text field */
+  getCopyText.select();
+  getCopyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(getCopyText.value);
+
+  /* Alert the copied text */
+  // alert("Copied the text: " + getCopyText.value);
+  let toolTip = document.getElementById("myToolTip");
+  toolTip.innerHTML = "Copied: " + getCopyText.value;
+};
+
+const outFunc = () => {
+  let tooltip = document.getElementById("myToolTip");
+  tooltip.innerHTML = "Copy to clipboard";
+};
+
 const ContactPage = () => {
   return (
     <ContactPageContainer>
       <PageTitle titleText="CONTACT ME" />
       <ContactSubTitle>EMAIL</ContactSubTitle>
       <ContactSectionContainer>
-        <ContactEmail>Ekdollinger@gmail.com</ContactEmail>
-        <CopyBtn className="btn">COPY</CopyBtn>
+        <ContactEmail
+          type="text"
+          value="ekdollinger@gmail.com"
+          id="myEmail"
+          spellCheck="false"
+          readOnly
+          disabled
+        />
+
+        <ToolTipContainer className="tool-tip-container">
+          <CopyBtn
+            className="btn"
+            onClick={() => copyText()}
+            onMouseOut={() => outFunc()}
+          >
+            <ToolTipContent className="tool-tip-text" id="myToolTip">
+              Copy to clipboard
+            </ToolTipContent>
+            COPY
+          </CopyBtn>
+        </ToolTipContainer>
       </ContactSectionContainer>
       <Underline />
       <OrTitleContainer>

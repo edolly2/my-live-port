@@ -12,7 +12,8 @@ const HomePage = () => {
   return (
     <HomePageContainer>
       <PageTitle titleText="ERIC DOLLINGER" />
-      <HomePageSubTitle>Front-End Developer</HomePageSubTitle>
+      <HomePageSubTitle>FRONT-END DEVELOPER</HomePageSubTitle>
+      <HomePageSubTitle>MY WORK</HomePageSubTitle>
     </HomePageContainer>
   );
 };

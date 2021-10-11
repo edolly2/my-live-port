@@ -61,11 +61,11 @@ export const Navbar = (props) => {
             <NavbarLISTITEM>BIO</NavbarLISTITEM>
           </NavLink>
           <NavLink
-            to="/portfolio"
+            to="/work"
             activeClassName="active-nav-link"
             className="link"
           >
-            <NavbarLISTITEM>PORTFOLIO</NavbarLISTITEM>
+            <NavbarLISTITEM>MY WORK</NavbarLISTITEM>
           </NavLink>
           <NavLink
             to="/contact"

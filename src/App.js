@@ -9,7 +9,7 @@ import ContactPage from "./_pages/ContactPage";
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import HomePage from "./_pages/HomePage";
-import PortfolioPage from "./_pages/PortfolioPage";
+import WorkPage from "./_pages/WorkPage";
 
 const App = () => {
   // const history = useHistory();
@@ -31,8 +31,8 @@ const App = () => {
         <Route path="/bio">
           <BioPage />
         </Route>
-        <Route path="/portfolio">
-          <PortfolioPage />
+        <Route path="/work">
+          <WorkPage />
         </Route>
         <Route path="/contact">
           <ContactPage />
