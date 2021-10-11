@@ -2,7 +2,8 @@ import { device } from "./DeviceSizes";
 import styled from "styled-components";
 
 const PageTitleContainer = styled.div`
-  width: 75%;
+  // width: 75%;
+  width: fit-content;
   display: flex;
   justify-content: center;
   margin: 7rem auto 0 auto;

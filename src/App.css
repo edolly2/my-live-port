@@ -1,3 +1,7 @@
+/* * {
+  border: 5px solid red !important;
+} */
+
 h1 {
   font-family: "Monday Routines";
   white-space: nowrap;
@@ -170,4 +174,24 @@ textarea::placeholder {
 
 .brown {
   background-color: gray;
+}
+
+.social-icons {
+  margin: 0.6rem 1.6rem;
+  display: flex;
+  font-size: 4rem;
+  position: relative;
+  transition: all 500ms ease-in-out;
+  color: #fff;
+}
+
+.social-icons:hover {
+  color: gold;
+  cursor: pointer;
+}
+
+.social-icons-close {
+  font-size: 2rem;
+  color: white;
+  transition: all 500ms ease-in-out;
 }

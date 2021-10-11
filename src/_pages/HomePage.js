@@ -13,7 +13,7 @@ const HomePage = () => {
     <HomePageContainer>
       <PageTitle titleText="ERIC DOLLINGER" />
       <HomePageSubTitle>FRONT-END DEVELOPER</HomePageSubTitle>
-      <HomePageSubTitle>MY WORK</HomePageSubTitle>
+      <HomePageSubTitle>PORTFOLIO</HomePageSubTitle>
     </HomePageContainer>
   );
 };

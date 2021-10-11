@@ -18,6 +18,7 @@ html {
   padding: 0;
   border: 0;
   box-sizing: inherit;
+  max-width: 100%;
 }
 
 html,
