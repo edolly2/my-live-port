@@ -1,10 +1,20 @@
+import { BsPen } from "react-icons/bs";
+import { FiUser } from "react-icons/fi";
+import { GoMail } from "react-icons/go";
 import { device } from "./DeviceSizes";
 import styled from "styled-components";
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+`;
 
 const ContactFormContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
+
 const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -44,7 +54,10 @@ const ContactFormComponent = () => {
     <ContactFormContainer>
       <ContactForm>
         <ContactFormLabel htmlFor="name">
-          Full Name:
+          <Wrapper>
+            <FiUser />
+            Full Name:
+          </Wrapper>
           <ContactFormInput
             type="text"
             name="name"
@@ -54,7 +67,10 @@ const ContactFormComponent = () => {
           />
         </ContactFormLabel>
         <ContactFormLabel htmlFor="email">
-          Email:
+          <Wrapper>
+            <GoMail />
+            Email:
+          </Wrapper>
           <ContactFormInput
             type="email"
             name="email"
@@ -64,7 +80,10 @@ const ContactFormComponent = () => {
           />
         </ContactFormLabel>
         <ContactFormLabel htmlFor="thoughts">
-          Your Thoughts:
+          <Wrapper>
+            <BsPen />
+            Your Thoughts:
+          </Wrapper>
           <ContactFormTextArea
             name="thoughts"
             id="thoughts"
