@@ -25,10 +25,10 @@ const SocialSidebarContainer = styled.div`
   position: relative;
   align-items: center;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
-  background-color: #fff;
+  // background-color: #fff;
   border-bottom-right-radius: 0.6rem;
   border-top-right-radius: 0.6rem;
-  background: black;
+  // background: black;
 `;
 const SocialSidebarCloseContainer = styled.div`
   display: flex;
@@ -42,19 +42,19 @@ const SocialSidebarCloseContainer = styled.div`
   height: 4rem;
   border-radius: 0 0.6rem 0.6rem 0;
   cursor: pointer;
-  background: black;
-  //   z-index: 1;
+  // background: black;
+  // z-index: 1;
 `;
 
-const SocialSidebar = () => {
+const SocialSidebar = (props) => {
   const [socialSidebarClosed, setSocialSidebarClosed] = useState(false);
   console.log(socialSidebarClosed);
   return (
     <SocialSidebarAside
-      style={{ marginLeft: !socialSidebarClosed ? "0rem" : "-5.6rem" }}
+      style={{ marginLeft: !socialSidebarClosed ? "0rem" : "-5.7rem" }}
       id="socialAside"
     >
-      <SocialSidebarContainer>
+      <SocialSidebarContainer className={props.socialSidebarClass}>
         <FaFacebookSquare className="social-icons" />
         <FaTwitterSquare className="social-icons" />
         <FaLinkedin className="social-icons" />
@@ -64,6 +64,7 @@ const SocialSidebar = () => {
       <SocialSidebarCloseContainer
         id="socialCloseContainer"
         onClick={() => setSocialSidebarClosed(!socialSidebarClosed)}
+        className={props.socialSidebarExitClass}
       >
         {!socialSidebarClosed ? (
           <FaChevronLeft className="social-icons-close" />

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import { CgMenuGridO } from "react-icons/cg";
 import { Navbar } from "./Navbar";
+import SocialSidebar from "./SocialSidebar";
 import styled from "styled-components";
-import { useLocation } from "react-router-dom";
 
 const HeaderContainer = styled.header`
   width: 100%;
@@ -48,6 +48,10 @@ const Header = () => {
           }}
         />
       </MenuIconContainer>
+      <SocialSidebar
+        socialSidebarClass={!navbarActive ? "black" : "white"}
+        socialSidebarExitClass={!navbarActive ? "black" : "white"}
+      />
     </HeaderContainer>
   );
 };

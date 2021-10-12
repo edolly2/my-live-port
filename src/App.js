@@ -9,7 +9,6 @@ import ContactPage from "./_pages/ContactPage";
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import HomePage from "./_pages/HomePage";
-import SocialSidebar from "./_components/SocialSidebar";
 import WorkPage from "./_pages/WorkPage";
 
 const App = () => {
@@ -26,7 +25,7 @@ const App = () => {
     <Router>
       <div className="App">
         <Header />
-        <SocialSidebar />
+
         <Route path="/" exact>
           <HomePage />
         </Route>

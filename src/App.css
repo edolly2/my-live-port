@@ -181,7 +181,7 @@ textarea::placeholder {
   display: flex;
   font-size: 4rem;
   position: relative;
-  transition: all 500ms ease-in-out;
+  transition: all 400ms ease-in-out;
   color: #fff;
 }
 
@@ -194,4 +194,24 @@ textarea::placeholder {
   font-size: 2rem;
   color: white;
   transition: all 500ms ease-in-out;
+}
+
+.white {
+  background: white;
+}
+
+.white .social-icons,
+.white .social-icons-close {
+  color: black;
+  transition: all 400ms ease-in-out;
+}
+
+.black {
+  color: white;
+  background-color: black;
+  transition: all 400ms ease-in-out;
+}
+
+.white .social-icons:hover {
+  color: gold;
 }
